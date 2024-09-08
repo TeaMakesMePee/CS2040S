@@ -33,7 +33,7 @@ public class bilskurar {
 
     static long merge(HashMap<Integer, Integer> farr, int arr[], int l, int m, int r)
     {
-        int inv = 0;
+        long inv = 0;
         int n1 = m - l + 1;
         int n2 = r - m;
 
