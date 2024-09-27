@@ -6,34 +6,24 @@ public class rankproblem {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(System.out);
         String[] line = br.readLine().split(" ");
+        List<String> arr = new ArrayList<>();
         int teams = Integer.parseInt(line[0]);
         int matches = Integer.parseInt(line[1]);
 
-        String[] arr = new String[teams];
-        for (int i = 1; i < teams + 1; i++) { arr[i - 1] = "T" + i; }
+        for (int i = 1; i < teams + 1; i++) { arr.add("T" + i); }
 
         for (int j = 0; j < matches; ++j) {
-            String[] match = br.readLine().replace("T", "").split(" ");
-            int teamA = Integer.parseInt(match[0]);
-            int teamB = Integer.parseInt(match[1]);
-        }
-    }
+            String[] match = br.readLine().split(" ");
+            int aInd = arr.indexOf(match[0]);
+            int bInd = arr.indexOf(match[1]);
 
-    int binarySearch(int arr[], int x)
-    {
-        int low = 0, high = arr.length - 1;
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-
-            if (arr[mid] == x)
-                return mid;
-
-            if (arr[mid] < x)
-                low = mid + 1;
-            else
-                high = mid - 1;
+            if (aInd > bInd) {
+                for (int x = bInd + 1; x < aInd + 1; x++) { arr.set(x - 1, arr.get(x)); }
+                arr.set(aInd, match[1]);
+            }
         }
 
-        return -1;
+        for (int x = 0; x < arr.size(); x++) { pw.append(arr.get(x)); if (x != arr.size() - 1) { pw.append(" "); } }
+        pw.flush();
     }
 }
