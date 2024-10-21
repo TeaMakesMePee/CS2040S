@@ -11,7 +11,7 @@ public class sidewayssorting {
             String[] arr = new String[size];
             for (int x = 0; x < loop; ++x) {
                 String[] l = br.readLine().split("");
-                for (int y = 0; y < l.length; ++y) {
+                for (int y = 0; y < size; ++y) {
                     if (arr[y] == null) arr[y] = l[y];
                     else arr[y] += l[y];
                 }
