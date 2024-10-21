@@ -6,7 +6,7 @@ public class numbertree {
         PrintWriter pw = new PrintWriter(System.out);
 
         String[] line = br.readLine().split(" ");
-        int nodes = (int) Math.pow(2.0, Double.parseDouble(line[0]) + 1.0) - 1;
+        int nodes = (1 << (Integer.parseInt(line[0]) + 1)) - 1;
 
         int currIndex = 0;
         if (line.length > 1) {
