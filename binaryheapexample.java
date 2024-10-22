@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-public class numbertree {
+public class binaryheapexample {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(System.out);

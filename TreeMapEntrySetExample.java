@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.Map.Entry;
 import java.io.*;
 
-public class sannvirdi {
+public class TreeMapEntrySetExample {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(System.out);
