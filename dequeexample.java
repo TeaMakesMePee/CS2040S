@@ -5,7 +5,7 @@ public class dequeexample {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(System.out);
 
-        Deque<Character> s = new ArrayDeque<>();
+        Deque<Character> s = new ArrayDeque<>(); //declare ass ArrayDeque
         char[] arr = br.readLine().toCharArray();
         for (char c : arr) {
             if (c == '<') {
@@ -17,7 +17,7 @@ public class dequeexample {
             }
         }
 
-        while(!s.isEmpty()) pw.print(s.pollFirst());
+        while(!s.isEmpty()) pw.print(s.pollFirst()); //check if not empty and poll, dont use size. (size is diff thing)
         pw.flush();
     }
 }
