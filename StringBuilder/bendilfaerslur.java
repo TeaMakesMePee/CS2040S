@@ -10,7 +10,7 @@ public class bendilfaerslur {
 
         StringBuilder sb = new StringBuilder();
         if (ipv4) {
-            String[] parts = addr.split("\\.");
+            String[] parts = addr.split("\\."); //split based on period
             for (int x = 3; x > -1; --x) { sb.append(parts[x] + "."); }
         } else {
             String[] parts = addr.split("::");
