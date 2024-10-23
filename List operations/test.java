@@ -1,16 +1,14 @@
 import java.util.*;
 import java.io.*;
-public class whatdoesthefoxsay {
+public class test {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         PrintWriter pw = new PrintWriter(System.out);
 
         int cases = Integer.parseInt(br.readLine());
-        HashMap <Integer> m = new HashMap<>();
-        
         for (int x = 0; x < cases; ++x) {
+            
             List<String> l = new ArrayList<>(Arrays.asList(br.readLine().split(" ")));
-
             String line = br.readLine();
             while (!line.equals("what does the fox say?")) {
                 String[] arr = line.split(" ");
