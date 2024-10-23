@@ -21,8 +21,13 @@ public class control {
             List<SortedSet<Character>> l = new ArrayList<SortedSet<Character>>(); //removal list
 
             for (SortedSet<Character> tmp : con) { //it through list of concoctions
-                intersect = tmp.size() >= newIngr.size() ? !Collections.disjoint(tmp, newIngr) : !newIngr.containsAll(tmp);
-                if (intersect) break;
+                // intersect = tmp.size() >= newIngr.size() ? !Collections.disjoint(tmp, newIngr) : !newIngr.containsAll(tmp);
+                // if (intersect) break;
+                // if (tmp.size() < newIngr.size()) { l.add(tmp); }
+                if (!Collections.disjoint(tmp, newIngr) && !newIngr.containsAll(tmp)) {
+                    intersect = true;
+                    break;
+                } 
                 if (tmp.size() < newIngr.size()) { l.add(tmp); }
             }
 
